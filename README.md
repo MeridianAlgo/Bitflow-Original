@@ -86,7 +86,7 @@ POLYGON_API_KEY=your_polygon_key
 ```
 
 ### 3. **Configure Settings and Let it do the rest!!!**
-BitFlow uses a simple text-based settings system. Modify files in the `user_settings/` directory:
+BitFlow uses a simple text-based settings system and to run the entire program just do this:
 
 ```bash
 node bitflow.js <token>
