@@ -1,0 +1,110 @@
+# Environment variables
+.env
+.env.*
+*.env
+!.env.example
+
+# Credentials & secrets
+scripts/credentials.json
+**/credentials.json
+
+# User-specific settings
+user_settings/
+user_settings-*.json
+user_settings/backups/
+
+# Logs & diagnostics
+logs/
+*.log
+*.log.json
+api_errors.log
+
+# Model artifacts (LLMs, ONNX, weights)
+models/
+core/models/
+models_cache/
+src/models_cache/
+*.gguf
+*.bin
+*.safetensors
+*.onnx
+*.pt
+*.pth
+*.ckpt
+
+# Data exports
+positions_sold.csv
+backtest_results.csv
+*.csv
+
+# Cache directories
+.cache/
+.parcel-cache/
+.npm/
+.yarn/
+temp/
+tmp/
+
+# Node / JavaScript
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.tgz
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+env/
+venv/
+pip-wheel-metadata/
+build/
+dist/
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Coverage & reports
+coverage/
+.nyc_output/
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.eslintcache
+
+# OS-generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Runtime artifacts
+*.pid
+*.seed
+*.pid.lock
+
+# Miscellaneous
+.serverless/
+.fusebox/
+.dynamodb/
