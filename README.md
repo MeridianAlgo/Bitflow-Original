@@ -65,56 +65,37 @@ BitFlow is a sophisticated cryptocurrency trading bot built for Node.js that com
 - **Trading Account** (Alpaca paper trading recommended for testing)
 - **Internet Connection** (for API access and model downloads)
 
-### 1. **Automated Setup (Recommended)**
-```bash
-git clone https://github.com/MeridianAlgo/Bitflow.git
-cd Bitflow
-node setup.js  # Installs everything automatically
-```
-
-### 2. **Manual Installation**
+### 1. **Manual Installation**
 ```bash
 git clone https://github.com/MeridianAlgo/Bitflow.git
 cd Bitflow
 npm install
+npm audit fix --force
+node install.js
+New-Item ".env"
+
 ```
 
-### 3. **Environment Setup**
-Create a `.env` file in the project root:
+### 2. **Environment Setup**
+In your new `.env` file in the project root (from the command 'New-Item ".env"' you typed above) type in these following lines exactly and put in your keys replacing the 'your_...':
 ```env
 # Required APIs (use paper trading for testing)
 ALPACA_API_KEY_ID=your_alpaca_key_id
 ALPACA_SECRET_KEY=your_alpaca_secret
 POLYGON_API_KEY=your_polygon_key
-FINNHUB_API_KEY=your_finnhub_key
-
-# Optional: AI API for enhanced features
-GEMINI_API_KEY=your_gemini_key
-
-# Optional: Llama API for fallback
-LLAMA_API_KEY=your_llama_api_key
 ```
 
-### 4. **Configure Settings**
+### 3. **Configure Settings and Let it do the rest!!!**
 BitFlow uses a simple text-based settings system. Modify files in the `user_settings/` directory:
 
-- `defaultTimeframe.txt` - Trading timeframe (1Min, 5Min, 15Min, 1Hour, 1Day)
-- `defaultTakeProfit.txt` - Take profit level (number or "auto")
-- `defaultStopLoss.txt` - Stop loss level (number or "auto")
-- `enableCrossunderSignals.txt` - Enable/disable MA crossunder signals (true/false)
-- `enablePerformanceMetrics.txt` - Enable/disable performance metrics (true/false)
-- `enablePositionLogging.txt` - Enable/disable position logging (true/false)
-
-### 5. **Start Trading**
 ```bash
-# Silent mode (recommended for production)
-$env:BITFLOW_MIN_UI=1; node bitflow.js BTC/USD
+node bitflow.js <token>
 
-# Verbose mode (for monitoring and debugging)
-$env:BITFLOW_MIN_UI=0; node bitflow.js BTC/USD
+Ex.
+node bitflow.js BTC/USD
+node bitflow.js XRP/USD
+mode bitflow.js ETH/USD
 
-# PowerShell (Windows)
-$env:BITFLOW_MIN_UI=1; node bitflow.js BTC/USD
 ```
 
 ---
