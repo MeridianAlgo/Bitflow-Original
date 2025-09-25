@@ -13,11 +13,6 @@ user_settings/
 user_settings-*.json
 user_settings/backups/
 
-# Logs & diagnostics
-logs/
-*.log
-*.log.json
-api_errors.log
 
 # Model artifacts (LLMs, ONNX, weights)
 models/
